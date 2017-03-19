@@ -1,0 +1,30 @@
+
+{{#if currentUser}}
+<div class="navbar-form navbar-right">
+    <div class="dropdown">
+        <button class="btn btn-link btn-login dropdown-toggle" type="button" id="dropdownMenuLogin" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="true">
+                    <class class="glyphicon glyphicon-user"></class>
+                    {{userDetail.response.name}}
+                    <span class="caret"></span>
+                </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLogin">
+            <li><a href="/logout">退出</a></li>
+        </ul>
+    </div>
+</div>
+{{else}}
+<div class="navbar-form navbar-right">
+    <div class="dropdown">
+        <button class="btn btn-link btn-login dropdown-toggle" type="button" id="dropdownMenuLogin" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="true">
+                    <class class="glyphicon glyphicon-user"></class>
+                    登陆
+                    <span class="caret"></span>
+                </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLogin">
+           <div class="ds-login pull-right"></div> 
+        </ul>
+    </div>
+</div>
+{{/if}}

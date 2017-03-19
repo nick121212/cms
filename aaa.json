@@ -1,0 +1,23 @@
+{
+    "query": {
+        "bool": {
+            "must_not": [{
+                    "missing": {
+                        "field": "responseBody"
+                    }
+                }
+
+            ],
+            "must": [
+
+                {
+                    "query": {
+                        "regexp": {
+                            "path": "/health/[0-9].+.shtml"
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}
