@@ -181,6 +181,8 @@ exports.importContent = function() {
                 });
             });
 
+            console.log(response._scroll_id);
+
             if (response.hits.total > allTitles.length) {
                 // ask elasticsearch for the next set of hits from this search
                 client.scroll({
