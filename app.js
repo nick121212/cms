@@ -28,13 +28,15 @@ app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(logger.access());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(function(req, res, next) {
+    logger.dev().info(req.body, req.query, req.params)
+});
 app.use(validator());
 app.use(cookieParser());
 app.use(session.check(), session.init());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(duoshuoService.importContent());
-
 // app.use(duoshuoService.signin());
 app.use(duoshuoService.userInfo());
 /**
