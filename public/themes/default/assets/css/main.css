@@ -357,3 +357,7 @@ h6,
 .ds-kaixin {
     display: none !important;
 }
+
+.ds-alert {
+    display: none !important;
+}

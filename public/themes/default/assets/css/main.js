@@ -612,5 +612,8 @@ export default StyleSheet.create({
   },
   'ds-kaixin': {
     'display': 'none !important'
+  },
+  'ds-alert': {
+    'display': 'none !important'
   }
 });

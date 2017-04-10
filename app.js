@@ -37,7 +37,7 @@ app.use(cookieParser());
 app.use(session.check(), session.init());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(duoshuoService.importContent());
+// app.use(duoshuoService.importContent());
 // app.use(duoshuoService.signin());
 app.use(duoshuoService.userInfo());
 /**

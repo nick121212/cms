@@ -55,7 +55,7 @@ module.exports = function(req, res, next) {
             if (err && !results.category) return next();
             if (err) return res.status(500).end();
 
-            console.log(content);
+            // console.log(results.navigation);
 
             res.render(_.get(results.category, 'views.content'), {
                 layout: _.get(results.category, 'views.layout'),
@@ -83,7 +83,6 @@ module.exports = function(req, res, next) {
                 tags: content.tags,
                 url: req.protocol + "://" + req.headers.host + content.url,
                 extensions: content.extensions,
-
                 currentUser: req.session.user
             });
         });
