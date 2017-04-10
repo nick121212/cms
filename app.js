@@ -29,7 +29,8 @@ app.use(logger.access());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(function(req, res, next) {
-    logger.dev().info(req.body, req.query, req.params)
+    logger.dev().info(req.body, req.query, req.params);
+    next();
 });
 app.use(validator());
 app.use(cookieParser());
